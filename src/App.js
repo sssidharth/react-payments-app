@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const Sidebar = lazy(() => import('./Components/Navigation/Sidebar'));
 const Topbar = lazy(() => import('./Components/Navigation/Topbar'));
 const Dashboard = lazy(() => import('./Components/Dashboard/Dashboard'));
-const Settings = lazy(() => import('./Components/Settings'));
+const Settings = lazy(() => import('./Components/Settings/Settings'));
 const CreditCardsAll = lazy(() => import('./Components/CreditCards/CreditCardsAll'));
 
 function App() {
