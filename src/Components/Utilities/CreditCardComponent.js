@@ -4,16 +4,16 @@ import ChipIconDark from '../../Assets/Chip_Card_black.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCcMastercard } from "@fortawesome/free-brands-svg-icons";
 
-const CreditCard = ({ data, index }) => {
+const CreditCard = ({ data, index, className }) => {
   const isOdd = index % 2 === 0; // Check if the index is even (alternates the style)
 
   const oddStyle =
-    "bg-gradient-to-r from-gray-600 to-black text-white mr-10"; // Dark card styles
+    "bg-gradient-to-r from-gray-600 to-black text-white"; // Dark card styles
   const evenStyle = "bg-white border border-gray-300 text-gray-800"; // Light card styles
 
   return (
     <div
-      className={`rounded-2xl min-w-[320px] lg:w-1/2 h-60 flex flex-col justify-between shadow-md ${isOdd ? oddStyle : evenStyle}`}
+      className={`${className} rounded-2xl min-w-[320px] h-60 flex flex-col justify-between shadow-md ${isOdd ? oddStyle : evenStyle}`}
     >
       {/* Balance Section */}
       <div className="flex justify-between items-center mb-4 p-4">

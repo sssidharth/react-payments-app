@@ -56,7 +56,7 @@ const QuickTransfers = ({ profiles }) => {
      <div className='flex items-center justify-between'>
       <p className='text-md text-light-gray-font'>Write Amount</p>
       <div className="flex items-center gap-0 relative">
-      <CustomInputs type="left-pill" className="lg:w-80" placeholder="$ Amount" />
+      <CustomInputs type="left-pill" className="lg:w-72" placeholder="$ Amount" />
       <CustomButton text="Submit" type="fixed-pill" icon={faPaperPlane} />
       </div>
      </div>

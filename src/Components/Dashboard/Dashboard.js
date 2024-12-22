@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDashboardDataStart } from '../../store/actions/dashboardActions';
+import { fetchDashboardDataStart, fetchUserCards } from '../../store/actions/actions';
 import CustomCard from '../Utilities/CustomCard';
 import CreditCard from '../Utilities/CreditCardComponent';
 import RecentTransactions from './RecentTransactions';
@@ -21,21 +21,25 @@ const Dashboard = () => {
     const [balances, setBalances] = useState();
 
     const dashboardData = useSelector((state) => state.dashboardReducer.dashboardData);
+    const myCards = useSelector((state) => state.dashboardReducer.myCards);
 
     useEffect(() => {
       dispatch(fetchDashboardDataStart());
+      dispatch(fetchUserCards());
     }, [dispatch]);
 
     useEffect(() => {
       if (Object.keys(dashboardData).length > 0) {
-        setCardsData(dashboardData.myCards);
         setTransactions(dashboardData.recentTransactions);
         setBalances(dashboardData.balanceHistoryChart);
         setActivity(dashboardData.weeklyActivityChart);
         setQuickTransfers(dashboardData.quickTransfer);
         setExpenses(dashboardData.expenseStatistics);
       }
-    },[dashboardData]);
+      if (myCards && myCards.length > 0) {
+        setCardsData(myCards);
+      }
+    },[dashboardData, myCards]);
 
 
   return (
@@ -49,7 +53,7 @@ const Dashboard = () => {
             <div className='flex flex-row overflow-x-auto justify-between h-full'>
             {cardsData && cardsData.length > 0 ? cardsData.slice(0,2).map((card, index) => {
             return (
-                <CreditCard key={index} index={index} data={card}/>
+                <CreditCard key={index} index={index} data={card} className={`lg:w-1/2 ${index%2 === 0 ? 'mr-10' : ''}`}/>
             )
          }) : null}
             </div>

@@ -1,35 +1,5 @@
 {
     "dashboard": {
-      "myCards": [
-        {
-          "cardId": "1",
-          "cardHolderName": "John Doe",
-          "cardNumber": "**** **** **** 1234",
-          "validThru": "12/25",
-          "balance": 1250.75
-        },
-        {
-          "cardId": "2",
-          "cardHolderName": "John Doe",
-          "cardNumber": "**** **** **** 5678",
-          "validThru": "12/25",
-          "balance": 560.40
-        },
-        {
-          "cardId": "3",
-          "cardHolderName": "John Doe",
-          "cardNumber": "**** **** **** 9876",
-          "validThru": "12/25",
-          "balance": 9800.10
-        },
-        {
-          "cardId": "4",
-          "cardHolderName": "John Doe",
-          "cardNumber": "**** **** **** 2402",
-          "validThru": "12/25",
-          "balance": 4500.10
-        }
-      ],
       "recentTransactions": [
         {
           "id": "1",
@@ -121,6 +91,50 @@
         "postalCode": "12345",
         "country": "USA",
         "profilePicture": "john.jpg"
-      }
+      },
+      "myCards": [
+        {
+          "cardId": "1",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 1234",
+          "validThru": "12/25",
+          "balance": 1250.75
+        },
+        {
+          "cardId": "2",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 5678",
+          "validThru": "12/25",
+          "balance": 560.40
+        },
+        {
+          "cardId": "3",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 9876",
+          "validThru": "12/25",
+          "balance": 9800.10
+        },
+        {
+          "cardId": "4",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 2402",
+          "validThru": "12/25",
+          "balance": 4500.10
+        },
+        {
+          "cardId": "4",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 2402",
+          "validThru": "12/25",
+          "balance": 4500.10
+        },
+        {
+          "cardId": "4",
+          "cardHolderName": "John Doe",
+          "cardNumber": "**** **** **** 2402",
+          "validThru": "12/25",
+          "balance": 4500.10
+        }
+      ]
   }
   
