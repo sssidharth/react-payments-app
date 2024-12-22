@@ -1,11 +1,6 @@
 import React, {useState, lazy, Suspense} from 'react';
 import "./globals.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Sidebar from './Components/Navigation/Sidebar';
-// import Topbar from './Components/Navigation/Topbar';
-// import Dashboard from './Components/Dashboard/Dashboard';
-// import Settings from './Components/Settings';
-// import CreditCardsAll from './Components/CreditCards/CreditCardsAll';
 const Sidebar = lazy(() => import('./Components/Navigation/Sidebar'));
 const Topbar = lazy(() => import('./Components/Navigation/Topbar'));
 const Dashboard = lazy(() => import('./Components/Dashboard/Dashboard'));
@@ -35,7 +30,6 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/settings" element={<Settings/>} />
             <Route path="/cards" element={<CreditCardsAll/>} />
-            {/* Add more routes here */}
         </Routes>
         </div>
       </div>
