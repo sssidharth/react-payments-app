@@ -41,7 +41,7 @@ const QuickTransfers = ({ profiles }) => {
            key={index}
            className="flex flex-col items-center w-18 text-center hover:font-semibold"
          >
-           <ProfileImage src={ProfilePic} width={70} height={70} />
+           <ProfileImage src={ProfilePic} className="w-[70px] h-[70px]" />
            <p className="mt-2">{profile.name}</p>
            <p className="text-sm text-light-gray-font">{profile.role}</p>
          </div>
@@ -57,7 +57,7 @@ const QuickTransfers = ({ profiles }) => {
       <p className='text-md text-light-gray-font'>Write Amount</p>
       <div className="flex items-center gap-0 relative">
       <CustomInputs type="left-pill" className="lg:w-72" placeholder="$ Amount" />
-      <CustomButton text="Submit" type="fixed-pill" icon={faPaperPlane} />
+      <CustomButton text="Submit" type="pill-fixed" icon={faPaperPlane} />
       </div>
      </div>
     </div>

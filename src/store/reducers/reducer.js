@@ -5,6 +5,9 @@ import {
   FETCH_USER_CARDS,
   FETCH_USER_CARDS_SUCCESS,
   FETCH_USER_CARDS_FAILED,
+  FETCH_PROFILE_DATA,
+  FETCH_PROFILE_DATA_SUCCESS,
+  FETCH_PROFILE_DATA_FAILED
 } from "../actions/actions";
 
 const initialState = {
@@ -17,6 +20,11 @@ const initialState = {
   myCards: [],
   cardsLoading: false,
   cardsError: null,
+
+  // user Profile
+  profileData: {},
+  profileLoading: false,
+  profileDataError: null
 };
 
 const dashboardReducer = (state = initialState, action) => {
@@ -45,6 +53,7 @@ const dashboardReducer = (state = initialState, action) => {
         loading: false,
         error: 'Failed to fetch data',
       };
+    
     case FETCH_USER_CARDS:
       return {
         ...state,
@@ -63,6 +72,25 @@ const dashboardReducer = (state = initialState, action) => {
         cardsLoading: false,
         cardsError: 'Failed to Fetch the Cards data',
       };
+    
+      case FETCH_PROFILE_DATA:
+        return {
+          ...state,
+          profileLoading: true,
+          profileDataError: null,
+        };
+      case FETCH_PROFILE_DATA_SUCCESS:
+        return {
+          ...state,
+          profileLoading: false,
+          profileData: action.payload
+        };
+      case FETCH_PROFILE_DATA_FAILED:
+        return {
+          ...state,
+          profileLoading: false,
+          profileDataError: 'Failed to Fetch the profile data',
+        };
     default:
       return state;
   }

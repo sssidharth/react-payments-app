@@ -26,6 +26,7 @@ const Topbar = ({ toggleSidebar }) => {
             Overview
         </h1>
         <ProfileImage 
+          className="w-12 h-12"
           src={ProfilePic}
         />
       </div>
@@ -66,6 +67,7 @@ const Topbar = ({ toggleSidebar }) => {
           className='bg-slate-100 border h-12 border-gray-300 text-gray-400 mr-10 md:block hidden'
         />
         <ProfileImage 
+          className="w-12 h-12"
           src={ProfilePic}
         />
         </div>
