@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const getDbData = () => {
-  const filePath = path.resolve('./src/db.json');
+  const filePath = path.resolve('../db.json');
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 };
 
