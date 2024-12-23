@@ -181,7 +181,7 @@ const Settings = () => {
         </div>
         {/* Save Button */}
         <div className="mt-6 flex justify-end">
-         <CustomButton onclick={handleSubmit} className="md:w-56 w-full mt-4" />
+         <CustomButton onclick={handleSubmit} className="md:w-56 w-full mt-4 mr-6 mb-4" />
         </div>
       </CustomCard>
     </div>
