@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
 import TasksIcon from "../../Assets/mingcute_task-fill.svg";
 import {
@@ -14,8 +15,10 @@ import {
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { setCurrentPage } from "../../store/actions/actions";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
+  const dispatch = useDispatch();
   const [tabs, setTabs] = useState([
     {
       name: "Dashboard",
@@ -89,6 +92,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         active: currentPath === tab.path,
       }))
     );
+  const currentTab = tabs.find((tab) => tab.path === currentPath);
+  if (currentTab) {
+    dispatch(setCurrentPage(currentTab.name));
+  }
   }, []);
 
   const handleTabChange = (name) => {
@@ -98,6 +105,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         active: tab.name === name,
       }))
     );
+    dispatch(setCurrentPage(name));
   };
 
   const renderTabs = (tab, index) => {

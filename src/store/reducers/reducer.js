@@ -7,10 +7,13 @@ import {
   FETCH_USER_CARDS_FAILED,
   FETCH_PROFILE_DATA,
   FETCH_PROFILE_DATA_SUCCESS,
-  FETCH_PROFILE_DATA_FAILED
+  FETCH_PROFILE_DATA_FAILED,
+  SET_CURRENT_PAGE
 } from "../actions/actions";
 
 const initialState = {
+  //current page
+  currentPage: 'Dashboard',
   // Dashboard
   dashboardData: {},
   loadingDashboard: false,
@@ -29,6 +32,11 @@ const initialState = {
 
 const dashboardReducer = (state = initialState, action) => {
   switch (action.type) {
+    case SET_CURRENT_PAGE:
+      return {
+        ...state,
+        currentPage: action.payload
+      }
     case FETCH_DASHBOARD_DATA_START:
       return {
         ...state,

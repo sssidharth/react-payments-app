@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import CustomInputs from '../Utilities/CustomInputs';
 import RoundedIconButton from '../Utilities/RoundedIconButton';
 import ProfilePic from '../../Assets/pexels-christina-morillo-1181690 1.png'
@@ -9,6 +10,8 @@ import ProfileImage from '../Utilities/ProfileImage';
 const Topbar = ({ toggleSidebar }) => {
 
     const [searchText, setSearchText] = useState('');
+
+    const currentPage = useSelector(state => state.dashboardReducer.currentPage);
 
   return (
     <div className='header_base'>
@@ -23,7 +26,7 @@ const Topbar = ({ toggleSidebar }) => {
          <FontAwesomeIcon icon={faBars} /> 
         </button>
         <h1 className='text-xl font-bold ml-7'>
-            Overview
+            {currentPage}
         </h1>
         <ProfileImage 
           className="w-12 h-12"
@@ -44,7 +47,7 @@ const Topbar = ({ toggleSidebar }) => {
         {/* Desktop View */}
         <div className='md:flex hidden flex-row justify-between items-center w-full'>
         <h1 className='text-xl font-bold'>
-            Overview
+          {currentPage}
         </h1>
         <div className='flex flex-row justify-between items-center'>
         <CustomInputs 

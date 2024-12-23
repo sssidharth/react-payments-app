@@ -14,6 +14,8 @@ export const MODIFY_PROFILE_DATA = 'MODIFY_PROFILE_DATA';
 export const MODIFY_PROFILE_DATA_SUCCESS = 'MODIFY_PROFILE_DATA_SUCCESS';
 export const MODIFY_PROFILE_DATA_FAILED = 'MODIFY_PROFILE_DATAS_FAILED';
 
+export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE";
+
 export const fetchDashboardDataStart = () => ({
   type: FETCH_DASHBOARD_DATA_START,
 });
@@ -69,4 +71,9 @@ export const fetchUserCardsSuccess = (data) => ({
 export const fetchUserCardsFailed = (error) => ({
   type: FETCH_USER_CARDS_FAILED,
   payload: error,
+});
+
+export const setCurrentPage = (page) => ({
+  type: SET_CURRENT_PAGE,
+  payload: page,
 });
