@@ -1,9 +1,8 @@
-import { create, router as _router, defaults } from "json-server";
-const server = create();
-const router = _router("./db.json");
-const middlewares = defaults();
+const { createServer } = require("json-server");
+const server = createServer();
+const router = require("./db.json");
+const middlewares = require("json-server").defaults();
 
 server.use(middlewares);
 server.use(router);
-
-export default server;
+module.exports = server;
