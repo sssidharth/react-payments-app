@@ -1,5 +1,5 @@
 import { call, put, takeEvery } from 'redux-saga/effects';
-import apiClient from '../../Api/axios.config';
+import apiClient from '../../axios.config';
 import {
   FETCH_USER_CARDS,
   fetchUserCardsSuccess,
