@@ -16,7 +16,7 @@
 
 ## Setup
  
- - install the dependencies using 'npm install'
+ - install the dependencies using 'npm install --legacy-peer-deps' (Did this as we have react version 19 which is not yet supported by Chart.Js and Fontawesome. Will fix the version mismatch)
  - Open 2 terminals (1 if already using VS code) and navigate to the project directory
  - run "npm run mock-server" on one terminal. This will start up the mock server for HTTP endpoints
  - run "npm start" to start the react application
