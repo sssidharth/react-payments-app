@@ -7,7 +7,7 @@ import {
   Legend,
   Tooltip,
 } from 'chart.js';
-import { Chart } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import CustomCard from '../Utilities/CustomCard';
 
 // Register Chart.js components
@@ -79,7 +79,7 @@ const WeeklyActivity = ({ activity }) => {
 
   return (
     <CustomCard 
-    children={chartData ? <Chart type="bar" data={chartData} options={options} /> : null}
+    children={chartData ? <Bar data={chartData} options={options} /> : null}
     className="h-80 flex justify-center items-center"
     />
   );
