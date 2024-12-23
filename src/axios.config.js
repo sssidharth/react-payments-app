@@ -3,7 +3,7 @@ import axios from "axios";
 console.log("Base URL:", process.env.REACT_APP_API_BASE_URL);
 
 const apiClient = axios.create({
-    baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:3001", // Replace with your API base URL
+    baseURL: "https://react-payments-app.vercel.app/", /* Replcae with http://localhost:3001 for local  */
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "no-cache",
