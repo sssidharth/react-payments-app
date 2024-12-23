@@ -1,6 +1,7 @@
 import React, {useState, lazy, Suspense} from 'react';
 import "./globals.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Loader from './Components/Utilities/LoaderComponent';
 const Sidebar = lazy(() => import('./Components/Navigation/Sidebar'));
 const Topbar = lazy(() => import('./Components/Navigation/Topbar'));
 const Dashboard = lazy(() => import('./Components/Dashboard/Dashboard'));
@@ -15,7 +16,7 @@ function App() {
   };
   return (
     <Router>
-      <Suspense fallback={<h1>...Loading</h1>}>
+      <Suspense fallback={<Loader />}>
       <div className="h-screen flex overflow-hidden">
         <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
         <div className={`flex-1 flex flex-col transition-all duration-300 ${

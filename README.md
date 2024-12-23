@@ -20,3 +20,8 @@
  - Open 2 terminals (1 if already using VS code) and navigate to the project directory
  - run "npm run mock-server" on one terminal. This will start up the mock server for HTTP endpoints
  - run "npm start" to start the react application
+
+ ## Deployment
+
+ - The app has been deployed on Vercel. It directly accesses the db.json file for fetching/updating the data as it is serverless. (Creating a json-server itself is a complicated task which works seamlessly in local)
+ - Vercel Link https://react-payments-app.vercel.app/

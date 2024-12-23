@@ -130,7 +130,7 @@
     }
   },
   "userProfile": {
-    "firstName": "John",
+    "firstName": "Mary",
     "lastName": "Doe",
     "email": "john.doe@example.com",
     "password": "12345678q",
