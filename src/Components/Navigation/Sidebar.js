@@ -139,7 +139,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <div>
           <div className="p-6 flex items-center pl-12">
             <img className="size-8 mr-2" src={TasksIcon} alt="taskIcon" />
-            <h1 className="text-xl font-bold">Soar Task</h1>
+            <h1 className="text-xl font-bold">Payments app</h1>
             <FontAwesomeIcon
               onClick={toggleSidebar}
               icon={faClose}
